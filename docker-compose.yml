@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    # ビルドコンテキスト（docker build を実行する際の作業ディレクトリ/Dockerfile作成）
+    build: ./infra/php
+    # ホスト側:コンテナ側へマウント（Laravelをインストールするディレクトリ）
+    volumes:
+      - ./backend:/work
